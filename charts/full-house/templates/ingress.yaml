@@ -22,13 +22,6 @@ spec:
       secretName: {{ .secretName }}
   {{- end }}
   {{- end }}
-  {{- if .Values.ingress.defaultBackend.enabled }}
-  defaultBackend:
-    service:
-      name: {{ $fullName }}
-      port:
-        number: 8080
-  {{- end }}
   rules:
     {{- range .Values.ingress.hosts }}
     - host: {{ required "A hostname for the ingress must be provided in .Values.ingress.host" .host | quote }}
