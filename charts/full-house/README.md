@@ -27,11 +27,12 @@ $ helm install my-release philmtd/full-house
 
 ### Full House parameters
 
-| Name                              | Description                                                        | Value                |
-| --------------------------------- | ------------------------------------------------------------------ | -------------------- |
-| `fullhouse.image.name`            | The container image repository                                     | `philmtd/full-house` |
-| `fullhouse.image.tag`             | The container image tag, defaults to `Chart.AppVersion` if not set | `""`                 |
-| `fullhouse.image.imagePullPolicy` | Image Pull Policy                                                  | `IfNotPresent`       |
+| Name                              | Description                                                                                                         | Value                |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| `fullhouse.image.name`            | The container image repository                                                                                      | `philmtd/full-house` |
+| `fullhouse.image.tag`             | The container image tag, defaults to `Chart.AppVersion` if not set                                                  | `""`                 |
+| `fullhouse.image.imagePullPolicy` | Image Pull Policy                                                                                                   | `IfNotPresent`       |
+| `fullhouse.configuration`         | The Full House configuration file contents as yaml. Not required and will be merged with the default configuration. | `nil`                |
 
 
 ### Probes
