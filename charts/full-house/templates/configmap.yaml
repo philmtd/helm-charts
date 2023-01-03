@@ -1,0 +1,10 @@
+{{- if .Values.fullhouse.configuration }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "full-house.fullname" . }}
+  labels:
+  {{- include "full-house.labels" . | nindent 4 }}
+data:
+  fullhouse.yaml: |- {{ toYaml .Values.fullhouse.configuration | nindent 4 }}
+{{- end -}}

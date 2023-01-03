@@ -33,6 +33,11 @@ spec:
             - containerPort: 8080
               name: http
           {{- with .Values.livenessProbe }}
+          volumeMounts:
+            - mountPath: /app/config/fullhouse.yaml
+              name: config
+              subPath: fullhouse.yaml
+              readOnly: true
           livenessProbe:
             httpGet:
               path: /up
@@ -64,3 +69,8 @@ spec:
           {{- end }}
           resources: {{- toYaml .Values.resources | nindent 12 }}
       restartPolicy: Always
+      volumes:
+        - name: config
+          configMap:
+            name: {{ include "full-house.fullname" . }}
+            optional: true
