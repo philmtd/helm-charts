@@ -33,6 +33,9 @@ fullhouse:
     tag: ""
     imagePullPolicy: IfNotPresent
 
+  ## @param fullhouse.configuration The Full House configuration file contents as yaml. Not required and will be merged with the default configuration.
+  configuration:
+
 ## @section Probes
 ##
 
