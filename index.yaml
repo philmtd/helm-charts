@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   full-house:
   - apiVersion: v2
+    appVersion: 1.2.0
+    created: "2023-01-08T12:42:11.338598979Z"
+    description: A Helm chart for the Full House planning poker tool
+    digest: cd7f76222fe898d3e7c7a29abc66ec52c014d2681c84a39a1aafec91d7daba90
+    name: full-house
+    type: application
+    urls:
+    - https://github.com/philmtd/helm-charts/releases/download/full-house-1.2.0/full-house-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
     appVersion: 1.1.0
     created: "2023-01-03T18:38:28.207071415Z"
     description: A Helm chart for the Full House planning poker tool
